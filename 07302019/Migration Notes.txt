@@ -1,0 +1,59 @@
+#############################################################################################
+# Release Date: 7/30/2019 Tue 03:00:00 PM CST 
+# Version Comments: 1. Adding D_STORE Dimension table mapping/mapping task
+#					2. Adding parameter file 
+#					3. Batch process simplification
+#					4. Add D_STORE table and modify open/closed/effctv dates datatype change
+#############################################################################################				
+
+Windows Server 
+---------------
+Check Directories, If not exist create manually
+
+Source:		C:\POSBOH\Source\SM_Interface
+Archive:	C:\POSBOH\Source\SM_Interface\Archive
+Parameters:	C:\Program Files\Informatica Cloud Secure Agent\apps\Data_Integration_Server\data\userparameters
+Scripts:	C:\Program Files\Informatica Cloud Secure Agent\InfaDir\Scripts
+
+Step 1 : Replicate the below scripts from Test Environment, placed in public folder from test env. 
+C:\Program Files\Informatica Cloud Secure Agent\InfaDir\Scripts
+SM_Archive_File_Batch
+SM_Archive_File_PowerShell
+SM_FTP_File_Batch
+SM_FTP_File_PowerShell
+
+Step 2 : Copy parameter file from test env. placed in public folder
+C:\POSBOH\ParamFile
+SM_Interface_Wrap_Files
+
+
+Database
+-------------
+DDL & DML Scripts are attached in the public folder
+
+Informatica:
+-------------
+Objects/Assets: 19 Informatica objects
+Enclosed Export Log for more details
+
+Connections: Ignore if already created, if not create them, replcate test env details.
+ODSConnection_STG
+ODSConnection_ODS
+ODSConnection
+FFConn_SRC_IICS_StoreMaster
+
+Conflicts: Replace all conflict resolutions
+
+Re-usable objects: Schduler should be created, if not alaready
+
+SeqGen: No sequence generator transformations used
+
+Other
+------
+Post production Monitor: Venkat/Hanuma 
+Back up Plan: Intial Version to Prod for D_STORE, Code back up will not require
+Rollback Plan: Revert all the versions of D_STORE 
+Schedule: Daily schedule will be up
+Impact: No Impact 
+Alert Notifications: Email will circulate to Venkat/Hanuma
+

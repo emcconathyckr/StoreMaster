@@ -1,0 +1,15 @@
+
+##SM(Unit Master) Interface Parameters for Scripts##
+
+[SM_Logs_Path]
+SM_Logs_Path=C:\POSBOH\Logs\SM_Interface
+
+[SM_Src_IN_Path]
+SM_Src_IN_Path=\\ckeanafnp01\OAR_DATA\Location\Unit_Master_Hierarchy
+
+[SM_IICS_Src_Path]
+SM_IICS_Src_Path=C:\POSBOH\Source\SM_Interface
+
+[SM_IICS_Src_Archive_Path]
+SM_IICS_Src_Archive_Path=C:\POSBOH\Source\SM_Interface\Archive
+

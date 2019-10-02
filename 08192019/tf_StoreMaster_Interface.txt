@@ -1,0 +1,4 @@
+[GLOBAL]
+$$tf_name=tf_StoreMaster_Interface
+$$interface_name=StoreMaster
+$$Target_Table_Name=ODS.D_STORE
